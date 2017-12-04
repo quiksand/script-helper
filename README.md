@@ -19,7 +19,7 @@ alias scripthelper='<path to runner file>' # — make it possible to run assista
 1. Clone the assignment
 2. In the local assessment repo, run command (or whatever alias you chose):
 ```
-scipthelper
+scripthelper
 ```
 This will generate the file with <script> tags set appropriately and open the file. It only checks the PWD, so make sure you call it from the correct folder.
 
