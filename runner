@@ -9,7 +9,7 @@ for i in *.js; do
     break
   fi
   START='<script src="./'
-  END='" type="text/javascript">'
+  END='" type="text/javascript"></script>'
   sed -i '' '/<body>/a\
     '"$START$i$END" ./runner.html
 done
