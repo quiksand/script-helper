@@ -8,7 +8,7 @@ This is still in Beta. Try it out BEFORE an assessment, not during :)
 1. Clone the repo to your local machine.
 2. In the local repository:
 ```
-chmod -x runner
+chmod +x runner
 ```
 3. In your bash profile:
 ```
