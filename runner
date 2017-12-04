@@ -1,0 +1,20 @@
+#!/bin/bash
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+cp "$DIR/runner.html" "$PWD/runner.html"
+for i in *.js; do
+  if [ "$i" = "*.js" ]
+  then
+    rm "$PWD/runner.html"
+    echo "No JS files found!"
+    break
+  fi
+  START='<script src="./'
+  END='" type="text/javascript">'
+  sed -i '' '/<body>/a\
+    '"$START$i$END" ./runner.html
+done
+
+if [ -e ./runner.html ]
+then
+  open ./runner.html
+fi
