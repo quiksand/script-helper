@@ -8,8 +8,9 @@ for i in *.js; do
     echo "No JS files found!"
     break
   fi
-  START='<script src="./'
-  END='" type="text/javascript"></script>'
+  START='\  \  <script src="./'
+  END='" type="text/javascript"></script>
+  '
   sed -i '' '/<body>/a\
     '"$START$i$END" ./runner.html
 done
